@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Калькулятор на JavaScript</title>
+  </head>
+  <body>
+    <h1>Калькулятор</h1>
+    <p>Если результат "NaN" то вы не коректно ввели число. Если результат "undefined" то вы не коректно ввели оператор. Если результат "Infinity" то вы поделили на 0.</p>
+    <a href="./index.html"><button>AC</button></a>
+    <script type="module">
+      let num1 = prompt("Введите первое число:");
+      let num2 = prompt("Введите второе число:");
+      let operator = prompt("Выберите оператор (+, -, *, /):");
+
+      let result;
+
+      if (operator == "+") {
+        result = parseFloat(num1) + parseFloat(num2);
+      } else if (operator == "-") {
+        result = parseFloat(num1) - parseFloat(num2);
+      } else if (operator == "*") {
+        result = parseFloat(num1) * parseFloat(num2);
+      } else if (operator == "/") {
+        result = parseFloat(num1) / parseFloat(num2);
+      }
+      switch (result) {
+        default:
+          alert("Нажмите 'Ок' чтобы посмотреть результат.");
+          break;
+      }
+      alert("Результат: " + result);
+    </script>
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
